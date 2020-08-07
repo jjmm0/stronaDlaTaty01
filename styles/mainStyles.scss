@@ -1,0 +1,131 @@
+
+$textBgColor: rgba(0, 0, 0, 0.582);
+$textBgOpacity: 50%;
+
+.wrapper {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+  }
+  .sampleText{
+      background-color: $textBgColor;
+      color:white;
+      position: absolute;
+      bottom: 0;
+      width: inherit;
+      p{
+          padding: 10px;
+      }
+      h2{
+          text-align: center;
+          padding: 4px;
+      }
+  }
+  .grid {
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 2px;
+    margin: 0;
+
+  }
+  /* desktop version */
+  @media (min-width: 1280px) {
+    html{
+        font-size: 16px;
+    }
+    .grid {
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(8, 1fr);
+    }
+    .box-1{
+        grid-area: 1/1/6/9;
+        height: 100%;
+    }
+    .box-2{
+        grid-area: 1/9/5/13;
+    }
+    .box-3{
+        grid-area: 5/9/9/13;
+    }
+    .box-4{
+        grid-area: 6/1/9/5;
+    }.box-5{
+        grid-area: 6/5/9/9;
+    }
+  }
+  /* end of desktop version */
+//   mobile version
+  @media (max-width: 1279px) {
+    html{
+        font-size: 12px;
+    }
+    .grid {
+          grid-template-columns: repeat(8, 1fr);
+          grid-template-rows: repeat(13, 1fr);
+    }
+    .box-1{
+        grid-area: 1/1/6/9;
+    }
+    .box-2{
+        grid-area: 6/1/11/5;
+    }
+    .box-3{
+        grid-area: 6/5/11/9;
+    }
+    .box-4{
+        grid-area: 11/1/14/5;
+    }.box-5{
+        grid-area: 11/5/14/9;
+    }
+  }
+//   end of mobile version
+  /*# sourceMappingURL=mainStyles.css.map */
+  .el{
+      position: relative;
+      text-align: center;
+  
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        user-select: none;
+
+        -webkit-filter: grayscale(50%);
+        filter: grayscale(50%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+      }
+  }
+  img:hover{
+    -webkit-filter: grayscale(0);
+	filter: grayscale(0);
+  }
+/* .box-1{
+      background-color: cyan;
+      grid-area: 1/1/6/9;
+      height: 100%;
+  }
+  .box-2{
+      background-color: blue;
+      grid-area: 1/9/5/13;
+      
+  }
+  .box-3{
+
+      grid-area: 5/9/9/13;
+  }
+  .box-4{
+      background-color: yellow;
+      grid-area: 6/1/9/5;
+  }.box-5{
+      background-color: fuchsia;
+      grid-area: 6/5/9/9;
+  } */
+  .grid img{
+      user-select: none;
+  }
