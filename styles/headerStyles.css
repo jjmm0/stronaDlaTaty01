@@ -24,55 +24,35 @@
   background-image: linear-gradient(to right, white, red);
 }
 
-/*a {
+.link {
   position: relative;
-  padding-left: 7px;
-  padding-right: 7px;
+  height: 100%;
   font-weight: bold;
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  p{
-    top: 25%;
-    position: absolute;
-  }
-} */
-/*a .main{
-  position: relative;
-  p{
-    position: absolute;
-    top: 50%;
-  }
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
-a .info{
+
+.link p {
+  margin: 0;
   position: relative;
-  p{
-    position: absolute;
-    top: 50%;
-  }
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
-a .gallery{
-  position: relative;
-  p{
-    position: absolute;
-    top: 50%;
-  }
+
+.link:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: black;
 }
-a .history{
-  position: relative;
-  p{
-    position: absolute;
-    top: 50%;
-  }
-}
-a .contact{
-  position: relative;
-  p{
-    position: absolute;
-    top: 50%;
-  }
-}
-*/
+
 a {
   position: relative;
   height: 100%;
@@ -98,7 +78,7 @@ a p {
 }
 
 @media (max-width: 570px) {
-  a {
+  .link {
     font-size: 12px;
   }
 }

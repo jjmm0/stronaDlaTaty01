@@ -1,6 +1,6 @@
 <template>
   <div id="container" >
-    <app-header />
+    <!-- <app-header /> -->
     <div class="nuxt-container"><Nuxt/></div>
     <!-- <app-footer /> -->
   </div>
@@ -25,9 +25,10 @@ export default {
   height: 100%;
 }
 #container {
+  /*
   display: flex;
   flex-direction: column;
-
+*/
 }
 .nuxt-container {
   height: calc(100% - 70px); /* value in px is navHeight */
@@ -56,7 +57,6 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   height: 100%;
-  position: fixed;
 }
 
 *,

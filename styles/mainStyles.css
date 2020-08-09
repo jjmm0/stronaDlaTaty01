@@ -11,7 +11,7 @@
   color: white;
   position: absolute;
   bottom: 0;
-  width: inherit;
+  width: 100%;
 }
 
 .sampleText p {
@@ -130,6 +130,10 @@
     grid-area: 11/5/14/9;
   }
 }
+.link {
+  cursor: pointer;
+}
+
 .el {
   position: relative;
   text-align: center;
@@ -148,6 +152,10 @@
   filter: grayscale(50%);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+
+a {
+  height: 100%;
 }
 
 img:hover {
