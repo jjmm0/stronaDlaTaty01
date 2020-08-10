@@ -2,18 +2,34 @@
 
 <div class="navblock">
   <div class="wrapper2">
-
-    <a href="/main" class="main"><p class="main">Główna</p></a>
-    <a href="/info" class="info"><p class="info">Informacje</p></a>
-    <a href="/gallery" class="gallery"><p class="gallery">Galeria</p></a>
-    <a href="/history" class="history"><p class="history">Ostatnie zlecenia</p></a>
-    <a href="/contact" class="contact"><p class="contact">Kontakt</p></a>
-
+    <!-- <div @click="linkNumberChange(0)"><p class="main" >Główna</p></div>
+    <div @click="linkNumberChange(1)"><p class="main" >Główna</p></div>
+    <button @click="linkNumberChange(0)">glowna</button>
+    <button @click="linkNumberChange(1)">kontakt</button> -->
+    <div class="link" @click="linkNumberChange(0)"><p>Główna</p></div>
+    <div class="link" @click="linkNumberChange(1)"><p>Informacje</p></div>
+    <div class="link" @click="linkNumberChange(2)"><p>Galeria</p></div>
+    <div class="link" @click="linkNumberChange(3)"><p>Historia</p></div>
+    <div class="link" @click="linkNumberChange(4)"><p>kontakt</p></div>
   </div>
 </div>
 
 </template>
 
+<script>
+export default {
+  data(){
+    return{
+      linkNumber: 0
+    }
+  },
+  methods:{
+    linkNumberChange(number){
+      this.$emit('changeSite', number)
+    }
+  }
+}
+</script>
 <style scoped lang="css" >
   @import ".././styles/headerStyles.css";
 </style>

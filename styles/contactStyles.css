@@ -1,0 +1,26 @@
+.article {
+  position: relative;
+  left: 25%;
+  min-width: 480px;
+  max-width: 80%;
+  width: 50%;
+  background-color: #7cd17c;
+  font-size: 16px;
+}
+
+.title {
+  background-color: black;
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+.container {
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+/*# sourceMappingURL=contactStyles.css.map */
