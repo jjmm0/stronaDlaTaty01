@@ -23,20 +23,26 @@ export default {
 
 #__nuxt, #__layout, #container {
   height: 100%;
+    box-sizing: border-box;
+
 }
 #container {
   /*
   display: flex;
   flex-direction: column;
 */
+  box-sizing: border-box;
+
 }
 .nuxt-container {
   height: calc(100% - 70px); /* value in px is navHeight */
   flex: 1;
+  box-sizing: border-box;
 
 }
 body{
   height: 100%;
+  box-sizing: border-box;
 
 }
 html {

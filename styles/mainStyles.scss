@@ -29,7 +29,7 @@ $textBgOpacity: 50%;
     display: grid;
     border: 1px solid black;
     grid-template-rows: repeat(8, 1fr);
-    grid-gap: 2px;
+    grid-gap: 0px;
     margin: 0;
 
   }
@@ -92,12 +92,14 @@ $textBgOpacity: 50%;
   .el{
       position: relative;
       text-align: center;
+      margin: 0 1.5px;
     img{
-        height: 100%;
+        height: calc(100% - 3px);
         width: 100%;
         object-fit: cover;
         user-select: none;
-
+        padding: 0;
+        margin: 0;
         -webkit-filter: grayscale(50%);
         filter: grayscale(50%);
         -webkit-transition: .3s ease-in-out;
@@ -135,3 +137,23 @@ $textBgOpacity: 50%;
   .grid img{
       user-select: none;
   }
+.contactInfo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0%;
+    transition:  0.5s;
+    p{
+        color: white;
+    }
+}
+.contactInfo:hover{
+    opacity: 90%;
+}
+
+.contactWindow{
+    height: 100%;
+    width:100%;
+    position: absolute;
+}

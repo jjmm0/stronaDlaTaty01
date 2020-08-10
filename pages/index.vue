@@ -21,7 +21,7 @@ export default {
   },
   methods:{
     changeSite(pageNumber1){
-      this.pageNumber = pageNumber1;
+      this.pageNumber = pageNumber1; 
     }
   }
 }

@@ -25,13 +25,21 @@
         </div>
       
       
-        <div class="el box-4 link" id="contact" @click="linkNumberChange(4)">
-            <img src="~/assets/montaz-klimatyzacji-split.jpg">
-            <div class="sampleText boxText4">
-              <h2>Kontakt</h2>
-            <p>{{contactText}}</p>
+        <div class="el box-4 link" id="contact" >
+            <div class="contactWindow"  @click="contactShowF(true)">
+                <img src="~/assets/montaz-klimatyzacji-split.jpg">
+                <div class="sampleText boxText4">
+                <h2>Kontakt</h2>
+                <p>{{contactText}}</p>
+                </div>
             </div>
-          
+            <div >
+                <div class="contactInfo"  @click="contactShowF(false)">
+                    <p>Email: tomasz.miga@gmail.com</p>
+                    <p>Telefon: +48 123321123</p>
+                    <p>ul.Chojnicka 19 Szczecinek 78-400</p>
+                </div>
+            </div>
         </div>
       
       
@@ -52,16 +60,20 @@
 export default {
   data(){
     return{
-      mainText: '1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Tortor aliquam nulla facilisi cras.',
-      infoText: 'Kliknij, aby dowiedzieć się więcej...',
-      galleryText: 'Kliknij, aby dowiedzieć się więcej...',
-      contactText: 'Kliknij, aby dowiedzieć się więcej...',
-      historyText: 'Kliknij, aby dowiedzieć się więcej...',
+        contactShow: false,
+        mainText: '1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Tortor aliquam nulla facilisi cras.',
+        infoText: 'Kliknij, aby dowiedzieć się więcej...',
+        galleryText: 'Kliknij, aby dowiedzieć się więcej...',
+        contactText: 'Kliknij, aby dowiedzieć się więcej...',
+        historyText: 'Kliknij, aby dowiedzieć się więcej...',
     }
   },
     methods:{
     linkNumberChange(number){
       this.$emit('changeSite', number)
+    },
+    contactShowF(show){
+        this.contactShow = show;
     }
   }
 }
