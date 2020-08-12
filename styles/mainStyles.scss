@@ -148,8 +148,9 @@ $textBgOpacity: 50%;
         color: white;
     }
 }
-.contactInfo:hover{
+#contact:hover .contactInfo {
     opacity: 90%;
+
 }
 
 .contactWindow{
